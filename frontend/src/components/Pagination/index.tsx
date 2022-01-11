@@ -1,5 +1,5 @@
 import {ReactComponent as Arrow} from "assets/img/seta.svg";
-import "./style.css"
+import "./style.css";
 
 function Pagination() {
     return (
