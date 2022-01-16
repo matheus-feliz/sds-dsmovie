@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import axios from "axios";
 import MovieCard from "components/MovieCard";
 import Pagination from "components/Pagination";
@@ -7,7 +8,6 @@ import { BASE_URL } from "utils/requests";
 
 
 function listing() {
-
 
     const [pageNumber, setPageNumber] = useState(0);
 
@@ -23,14 +23,14 @@ function listing() {
         empty: true
     });
 
-    useEffect(() => {
+       useEffect(() => {
         axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)
             .then(response => {
                 const data = response.data as MoviePage;
                 setPage(data);
             });
+    },[pageNumber]);
 
-    }, [pageNumber]);
 
     const handlePageChange = (newPageNumber:number)=>{
         setPageNumber(newPageNumber);
