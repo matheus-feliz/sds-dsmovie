@@ -11,7 +11,7 @@ import com.feliz.dsmovie.dto.ScoreDTO;
 import com.feliz.dsmovie.services.ScoreService;
 
 @RestController
-@RequestMapping(value = "/score")
+@RequestMapping(value = "/scores")
 public class ScoreController {
 		
 	@Autowired
